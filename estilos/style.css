@@ -155,9 +155,15 @@ article > h2 {
 }
 
 div.skillcontainer {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
+}
+
+div.skillcontainer .item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 div.skillcontainer .info {
@@ -181,7 +187,6 @@ div.skillcontainer .barra {
   width: 100%;
   background-color: var(--fundo-principal);
   border-radius: 4px;
-
 }
 
 div.skillcontainer .progresso {
@@ -271,6 +276,11 @@ div.formacao-container .curso {
       color: var(--destaque-inverso);
     }
 
+    a {
+      color: gray;
+      text-decoration: none;
+    }
+
     @media screen and (min-width: 768px) {
 
       li > a.link > i.fa-solid-fa-house {
@@ -292,6 +302,13 @@ div.formacao-container .curso {
         grid-column: 3 / 4;
       }
 
+      /* SKILLS EM 2 COLUNAS */
+      div.skillcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
       div.projeto-container .projeto {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -306,9 +323,4 @@ div.formacao-container .curso {
         max-width: 20%;
         max-height: 200px;
       }
-    }
-
-    a {
-      color: gray;
-      text-decoration: none;
     }
