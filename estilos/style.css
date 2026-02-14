@@ -91,6 +91,7 @@ section#ficha img.foto {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
+  object-position: top center;
   border: 5px solid white;
   outline: 5px solid var(--destaque);
   display: block;
